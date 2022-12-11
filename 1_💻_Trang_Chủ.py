@@ -8,7 +8,6 @@ LOGGER = get_logger(__name__)
 thedate = datetime.date.today()
 def run():
     st.image(r'./resources/enter_page_image.jpg', use_column_width=True)
-    st.set_page_config(page_title="Trang chủ", page_icon="💻")
 
     st.write("""
     # Đồ án Học máy: Dự đoán giá nhà
