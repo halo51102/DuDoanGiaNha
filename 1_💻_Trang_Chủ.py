@@ -24,7 +24,7 @@ def run():
 
     Đỗ Duy Nhựt - 20110298
 
-    Ngô Vũ Nhật Nguyên
+    Ngô Vũ Nhật Nguyên - 20110268
 
     Hồ Hà Thanh Lâm - 20110667
 
