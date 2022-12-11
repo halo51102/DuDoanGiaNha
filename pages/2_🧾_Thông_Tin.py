@@ -1,7 +1,7 @@
 import streamlit as st
 
 def app():
-    st.set_page_config(page_title="Information", page_icon="🧾")
+    st.set_page_config(page_title="Thông tin", page_icon="🧾")
 
     st.markdown("""
 # Dự đoán giá nhà
@@ -12,7 +12,7 @@ def app():
 
 ## Mục tiêu
 
-Mục tiêu của dự án này là dự đoán giá của một ngôi nhà ở Ames bằng cách sử dụng các thuộc tính do bộ dữ liệu cung cấp.
+Mục tiêu của dự án này là dự đoán giá của một ngôi nhà bằng cách sử dụng các thuộc tính do bộ dữ liệu cung cấp.
 
 ## Thuộc tính
 
