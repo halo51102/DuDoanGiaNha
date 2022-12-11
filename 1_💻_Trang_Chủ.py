@@ -17,9 +17,7 @@ def run():
     st.markdown(
         """
     "Dự đoán về giá nhà", xây dựng trên Streamlit framework, được phát triển bằng cách sử dụng bộ dữ liệu Kaggle 'House Prices - Advanced Regression Techniques'.
-    ### Mục tiêu
-
-    Mục tiêu của dự án này là dự đoán giá của một ngôi nhà ở Ames bằng cách sử dụng các tính năng do bộ dữ liệu cung cấp.
+    
     
     ------
 
@@ -33,7 +31,7 @@ def run():
 
     """
     )
-    st.write("###### Date: ", thedate)
+    st.write("###### Ngày: ", thedate)
                                         
                                           
                             

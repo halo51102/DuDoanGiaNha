@@ -44,14 +44,13 @@ def app():
     loaded_model = pickle.load(open(modelName, 'rb'))
 
     # %% STREAMLIT FRONTEND DEVELOPMENT
-    st.title("House Prices Prediction")
-    st.write("##### This is a simple model for house prices prediction.")
+    st.title("Dự đoán giá nhà")
+    st.write("##### Đây là một mô hình đơn giản để dự đoán giá nhà.")
 
-    st.sidebar.title("Model Parameters")
-    st.sidebar.write("### Feature importance of model")
+    st.sidebar.title("Tùy chỉnh thông số mô hình")
     
-    expander= st.sidebar.expander("Click Here for Feature Importance of Model ")
-    expander.write("## Feature Importance of Model")
+    expander= st.sidebar.expander("Các thuộc tính của mô hình")
+    expander.write("## Các thuộc tính quan trọng")
     
     # Get Feature importance of model
     featureImportances = pd.Series(loaded_model.feature_importances_,index = droppedDf.columns).sort_values(ascending=False)[:20]
@@ -78,12 +77,11 @@ def app():
 
     prediction = loaded_model.predict(inputDf)
 
-    st.write("###### Predicted price of the house in the properties you selected: $", prediction.item())
+    st.write("###### Giá dự đoán của ngôi nhà dựa vào các thuộc tính bạn đã chọn: $", prediction.item())
 
     st.markdown("------")
 
-    st.write("###### Version: 1.0")
-    st.write("###### Date: ", thedate)
+    st.write("###### Ngày: ", thedate)
     
 st.set_page_config(page_title="Prediction", page_icon="📈")
 
