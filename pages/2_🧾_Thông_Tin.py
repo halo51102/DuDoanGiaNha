@@ -49,22 +49,16 @@ Bộ dữ liệu chứa các thuộc tính sau:
 
 ```bash
 # clone the repo
-git clone https://github.com/uzunb/house-prices-prediction-LGBM.git
+git clone https://github.com/halo51102/DuDoanGiaNha.git
 
 # change to the repo directory
-cd house-prices-prediction-LGBM
+cd DuDoanGiaNHa
 
 # if virtualenv is not installed, install it
 #pip install virtualenv
 
 # create a virtualenv
 virtualenv -p python3 venv
-
-# activate virtualenv for linux or mac
-source venv/bin/activate
-
-# activate virtualenv for windows
-# venv\Scripts\activate
 
 # install dependencies
 pip install -r requirements.txt
