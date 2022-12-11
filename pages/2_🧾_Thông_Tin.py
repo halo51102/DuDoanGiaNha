@@ -8,10 +8,7 @@ def app():
 
 ## Mô tả
 
-"Dự đoán về giá nhà", xây dựng trên Streamlit framework, được phát triển bằng cách sử dụng bộ dữ liệu Kaggle 'House Prices - Advanced Regression Techniques'.
-
-## Dữ liệu
-Bộ dữ liệu (dataset) tham khảo tại [Kaggle](https://www.kaggle.com/c/house-prices-advanced-regression-techniques).
+"Dự đoán về giá nhà", xây dựng trên Streamlit framework"
 
 ## Mục tiêu
 
@@ -64,13 +61,13 @@ virtualenv -p python3 venv
 pip install -r requirements.txt
 
 # run the script
-streamlit run main.py
+streamlit run 1_💻_Trang_Chủ.py
 ```
 
 ## Mô hình phát triển
 
 ### Mô hình
-Dựa trên thuật toán [Grid Search Cross Validation](https://lightgbm.readthedocs.io/en/latest/index.html).
+Dựa trên thuật toán Grid Search Cross Validation
 
 ### Training
 
@@ -84,7 +81,7 @@ model = lgb.LGBMRegressor(max_depth=3,
 model.fit(x_train, y_train)
 ```
 
-Grid Search Cross Validation is used for hyper parameters of the model.
+Grid Search Cross Validation được sử dụng cho các tham số của mô hình.
 
 ```python
 from sklearn.model_selection import GridSearchCV
@@ -136,22 +133,7 @@ print('R2 Score:', r2_score(y_test, y_pred))
 
 ## Deployment
 
-Simple model distribution is made using Streamlit.
-
-```python
-import streamlit as st
-
-st.title("House Prices Prediction")
-st.write("This is a simple model for house prices prediction.")
-
-st.sidebar.title("Model Parameters")
-
-variables = droppedDf["Alley"].drop_duplicates().to_list()
-inputDict["Alley"] = st.sidebar.selectbox("Alley", options=variables)
-
-inputDict["LotFrontage"] = st.sidebar.slider("LotFrontage", ceil(droppedDf["LotFrontage"].min()), 
-floor(droppedDf["LotFrontage"].max()), int(droppedDf["LotFrontage"].mean()))
-```
+Phân phối mô hình đơn giản được thực hiện bằng Streamlit.
 
 
 """)
